@@ -1,5 +1,5 @@
 <header class="govuk-header {{ params.classes if params.classes }}" role="banner" data-module="header"
-        {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+        {% if params.attributes %}{%- for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endif %}>
   <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
 
     <div class="govuk-header__logo">

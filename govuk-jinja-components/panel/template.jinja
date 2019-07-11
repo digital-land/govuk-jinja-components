@@ -2,7 +2,7 @@
 <div class="govuk-panel govuk-panel--confirmation
   {%- if params.classes %} {{ params.classes }}{% endif %}"
   {%- if params.attributes %}
-  {%- for attribute, value in params.attributes.items %} {{attribute}}="{{value}}"{% endfor %}
+  {%- for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}
   {%- endif %}>
   <h{{ headingLevel }} class="govuk-panel__title">
     {{ params.titleHtml | safe if params.titleHtml else params.titleText }}

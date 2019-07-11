@@ -1,5 +1,5 @@
 <footer class="govuk-footer {{ params.classes if params.classes }}" role="contentinfo"
-        {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+        {% if params.attributes %}{%- for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endif %}>
   <div class="govuk-width-container {{ params.containerClasses if params.containerClasses }}">
     {% if params.navigation %}
       <div class="govuk-footer__navigation">
