@@ -45,14 +45,14 @@ treat it as an interactive element - without this it will be
 <a href="{{ params.href if params.href else '#' }}" role="button" draggable="false" {{- commonAttributes | safe }}>
   {{ params.html | safe if params.html else params.text }}
 {# Indentation is intentional to output HTML nicely #}
-{{- iconHtml | safe | trim | indent(2, true) if iconHtml -}}
+{{- iconHtml | trim | indent(2, true) if iconHtml -}}
 </a>
 
 {%- elif element == 'button' %}
 <button {%- if params.value %} value="{{ params.value }}"{% endif %}{%- if params.type %} type="{{ params.type }}"{% endif %} {{- buttonAttributes | safe }} {{- commonAttributes | safe }}>
   {{ params.html | safe if params.html else params.text }}
 {# Indentation is intentional to output HTML nicely #}
-{{- iconHtml | safe | trim | indent(2, true) if iconHtml -}}
+{{- iconHtml | trim | indent(2, true) if iconHtml -}}
 </button>
 
 {%- elif element == 'input' %}
