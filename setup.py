@@ -8,7 +8,7 @@ setup(
     license="MIT",
     packages=["govuk-jinja-components"],
     package_data={'govuk-jinja-components': ['templates/**.*']},
-    python_requires=">=3.6",
+    python_requires=">=3.5",
     install_requires=[
         "jinja2",
     ],
