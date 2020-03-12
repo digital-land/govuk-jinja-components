@@ -10,7 +10,7 @@
 {# Determine if we need 2 or 3 columns #}
 {% set anyRowHasActions = false %}
 {% for row in params.rows %}
-  {{ loop.count }}<br />
+  {{ loop.count }}
   {% set anyRowHasActions = true if row.actions.items else anyRowHasActions %}
 {% endfor -%}
 
