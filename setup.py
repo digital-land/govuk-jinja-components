@@ -6,7 +6,7 @@ setup(
     author="Colm Britton",
     description="GOVUK Design system components ported from Nunjucks to Jinja",
     license="MIT",
-    packages=["govuk-jinja-components"],
+    packages=["govuk_jinja_components"],
     package_data={'govuk-jinja-components': ['templates/**.*']},
     python_requires=">=3.6",
     install_requires=[
