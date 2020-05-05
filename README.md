@@ -2,17 +2,24 @@
 
 GOVUK Frontend components ported to jinja to use in Flask apps.
 
-Add this line to your requirements.txt
+### Install
 
-    -e git+https://github.com/digital-land/govuk-jinja-components#egg=govuk-jinja-components
+    pip install git+https://github.com/digital-land/govuk-jinja-components.git
 
-Add the following to your Flask factory.py
+### Using with Flask
 
-    def register_templates(app):
-        multi_loader = ChoiceLoader([
-            app.jinja_loader,
-            PrefixLoader({
-                'govuk-jinja-components': PackageLoader('govuk-jinja-components')
-            })
-        ])
-        app.jinja_loader = multi_loader
+You need to initialise the extension. We use the factory method. So in you `extensions.py`:
+
+    from govuk_jinja_components.flask_govuk_components import GovukComponents
+
+    govuk_components = GovukComponents()
+
+Then in your `factory.py`:
+
+    def register_extensions(app):
+        from application.extensions import govuk_components
+        govuk_components.init_app(app)
+
+Then the components should be available to your templates, e.g.
+
+    {% from "govuk-jinja-components/inset-text/macro.jinja" import govukInsetText -%}
