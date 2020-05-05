@@ -6,6 +6,8 @@ GOVUK Frontend components ported to jinja to use in Flask apps.
 
     pip install -e git+https://github.com/digital-land/govuk-jinja-components.git#egg=govuk_jinja_components
 
+Run same command to update it.
+
 ### Using with Flask
 
 You need to initialise the extension. We use the factory method. So in you `extensions.py`:
