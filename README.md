@@ -4,7 +4,7 @@ GOVUK Frontend components ported to jinja to use in Flask apps.
 
 ### Install
 
-    pip install git+https://github.com/digital-land/govuk-jinja-components.git
+    pip install -e git+https://github.com/digital-land/govuk-jinja-components.git#egg=govuk_jinja_components
 
 ### Using with Flask
 
