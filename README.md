@@ -1,4 +1,4 @@
-# govuk-jinja-components
+# govuk_jinja_components
 
 GOVUK Frontend components ported to jinja to use in Flask apps.
 
@@ -25,3 +25,19 @@ Then in your `factory.py`:
 Then the components should be available to your templates, e.g.
 
     {% from "govuk-jinja-components/inset-text/macro.jinja" import govukInsetText -%}
+
+### Alternative use
+
+Even if you are not using flask, you can still use these templates with Jinja. You can do this by registering the templates.
+
+    import jinja2
+    
+    # where you are setting up jinja add this
+    multi_loader = jinja2.ChoiceLoader([
+        jinja2.FileSystemLoader(searchpath="<<path to your templates>>"),
+        jinja2.PrefixLoader({
+            'govuk-jinja-components': jinja2.PackageLoader('govuk_jinja_components')
+        })
+    ])
+    jinja2.Environment(loader=multi_loader)
+
