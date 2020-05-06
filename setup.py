@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="govuk-jinja-components",
-    version="0.0.2",
+    version="0.0.5",
     author="Colm Britton",
     description="GOVUK Design system components ported from Nunjucks to Jinja",
     license="MIT",
