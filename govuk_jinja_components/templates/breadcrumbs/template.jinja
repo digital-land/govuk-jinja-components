@@ -1,9 +1,20 @@
-<div class="govuk-breadcrumbs{%- if params.classes %} {{ params.classes }}{% endif %}"{% if params.attributes %}{% for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endif %}>
+{# Set classes for this component #}
+{%- set classNames = "govuk-breadcrumbs " -%}
+
+{%- if params.classes %}
+  {% set classNames = classNames + params.classes %}
+{% endif -%}
+
+{% if params.collapseOnMobile %}
+  {% set classNames = classNames + " govuk-breadcrumbs--collapse-on-mobile" %}
+{% endif -%}
+
+<div class="{{classNames}}"{% if params.attributes %}{% for attribute, value in params.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endif %}>
   <ol class="govuk-breadcrumbs__list">
   {% for item in params['items'] %}
     {% if item.href %}
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="{{ item.href }}">{{ item.html | safe if item.html else item.text }}</a>
+      <a class="govuk-breadcrumbs__link" href="{{ item.href }}"{% if item.attributes %}{% for attribute, value in item.attributes.items() %} {{attribute}}="{{value}}"{% endfor %}{% endif %}>{{ item.html | safe if item.html else item.text }}</a>
     </li>
     {% else %}
     <li class="govuk-breadcrumbs__list-item" aria-current="page">{{ item.html | safe if item.html else item.text }}</li>
