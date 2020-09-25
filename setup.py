@@ -15,7 +15,7 @@ for directory in directories_jinja:
 
 setup(
     name="govuk-jinja-components",
-    version="0.0.5",
+    version="0.1.0",
     author="Colm Britton",
     description="GOVUK Design system components ported from Nunjucks to Jinja",
     license="MIT",
