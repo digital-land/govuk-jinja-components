@@ -114,3 +114,5 @@ local
 var
 tmp
 build
+
+.vscode

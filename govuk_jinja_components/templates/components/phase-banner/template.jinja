@@ -1,4 +1,4 @@
-{% from "govuk-jinja-components/tag/macro.jinja" import govukTag -%}
+{% from "govuk-jinja-components/components/tag/macro.jinja" import govukTag -%}
 
 <div class="govuk-phase-banner
   {%- if params.classes %} {{ params.classes }}{% endif %}"{% if params.attributes %}{% for attribute, value in params.attributes.items() %} {{ attribute }}="{{ value }}"{% endfor %}{% endif %}>
