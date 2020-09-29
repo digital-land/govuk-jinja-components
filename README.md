@@ -24,7 +24,7 @@ Then in your `factory.py`:
 
 Then the components should be available to your templates, e.g.
 
-    {% from "govuk-jinja-components/inset-text/macro.jinja" import govukInsetText -%}
+    {% from "govuk-jinja-components/components/inset-text/macro.jinja" import govukInsetText -%}
 
 ### Alternative use
 
