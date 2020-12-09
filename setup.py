@@ -25,4 +25,5 @@ setup(
     install_requires=[
         "jinja2",
     ],
+    include_package_data=True,
 )
