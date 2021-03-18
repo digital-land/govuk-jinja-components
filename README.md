@@ -2,6 +2,8 @@
 
 GOVUK Frontend components ported to jinja to use in Flask apps.
 
+**Note:** This is a port of the [GOV.UK template and components](https://github.com/alphagov/govuk-frontend) from Nunjucks to Jinja. Be careful not to introduce structural changes. They should be made in the projects that consume this.
+
 ### Install
 
     pip install -e git+https://github.com/digital-land/govuk-jinja-components.git#egg=govuk_jinja_components
